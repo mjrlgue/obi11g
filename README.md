@@ -33,4 +33,25 @@ The **Fusion Middleware** product category contains Oracle **Fusion Middleware (
 ### Application server name
 In previous versions of OBI, the default application server delivred with the product suite was **Oracle Container for Java (OC4J)**. However, with the release of OBI 11g, **Oracle WebLogic Server (WLS)** became the core application server. Previously, it was known as BEA WebLogic.
 
+Actually, the Oracle BI 11g installation process cannot begin until these repositories
+are created by the **Repository Creation Utility (RCU)** and accessible on a database
+server.
+>  Installing the Metadata Repository, goes into greater detail about this crucial repository structure, better known by two database schemas—Metadata Services (MDS) and BIPLATFORM.
+
+The **RPD** is the metadata storage mechanism in which Oracle BI developers model
+and map physical data sources to logical business representations in order for the
+resulting analytics to be easily consumed by the end users
+
+### Overall components
+There are a lot of components in OBI 11g. OBI can categorize these components by classifiying them based on the programming languages in which they were developed. They are mainly _Java_ or _C++_. 
+The following diagram provides a high-level overview of the main components that
+comprise the Oracle BI 11g architecture.
+[diagram 38]
+
+The term **Oracle BI Domain**, as noted previously and shown in the illustration, is
+used as a way to group all Oracle BI 11g components within the Fusion Middleware
+architecture. The default **WebLogic Application Server** name in installation option is `bifoundation_domain`.
+> WebLogic Server is a Java application server that manages all of the Oracle BI components developed in Java. Anothermanagement system, the **Oracle Process Management and Notification (OPMN)** system, handles the other components, which are referred to as **_System Components_**.
+
+
 
