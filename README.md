@@ -143,6 +143,22 @@ The following diagram shows how machines A, B and C are physically separated, ea
 
 [Image 46]
 
+### System tools controlled by WebLogic
+Previously, the WebLogic Administration Console controls the administrative configuration of the WebLogic Server Domain. This includes the components managed within it such as security, deployed applications, and so on. The other management tool which provides control on the deployed Oracle BI application ancillary deployments, libraries and several other configurations is called the **Enterprise Manager Fusion Middleware Control.**
+
+> The name is often shotened to **Fusion Control** or **Enterprise Manager**.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
