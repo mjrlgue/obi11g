@@ -97,7 +97,7 @@ Following illustration shows each of the components comprising the core Oracle B
 ### WebLogic Server
 **WebLogic** is an enterprise application server that is at the core of Oracle Fusion Middleware. The Oracle WebLogic Server is a scalble, enterprise-ready **Java Platform Enterprise Edition (Java EE)** application server. Its infrastructure supports the deployment of many types of distributed applications.
 
-### WebLogic Domian
+### WebLogic Domain
 The highest unit of management for controlling the WebLogic Server Installation is called a **domain**. A domain is a logically related group of WebLogic Server resources that you manage as a unit. A domain always includes, and is centrally maanged by one Administration Server. Additional WebLogic Server instances which are controlled by the Administration Server for the domain are called **Managed Servers**. The configuration for all the servers in the domain is stored in the configuration repository, the `config.xml` file, which resides on the macine hosting the Administration Server. The `config.xml` files, by default, are stored in the path `<FMW_HOME>\user_projects\domains\bifoundation_domain\`,
 where `<FMW_HOME>` is the path on the server to which you have installed OBI 11g.
 
@@ -120,6 +120,24 @@ synonymous._  If the WebLogic Server is not running, the WebLogic Administration
 Console will be unavailable as well. If the WebLogic AdminServer is not running, no
 administrative tasks can be made to the system, although concessions are made for
 a High Availability configuration.
+
+### WebLogic Managed Server
+Web applications, **Enterprise Java Beans (EJB)**, and other resources are deployed
+on to one or more WebLogic Managed Servers in a WebLogic Domain. A WebLogic
+Managed Server is an instance of a WebLogic Server in a WebLogic Server domain. Only one Administration Server per domain must exist, but one or more Managed Servers may exist in
+the WebLogic Server domain. Having one or more managed servers, allow for
+deployed JEE applications to be logically delineated.
+In a production deployment, OBI 11g is deployed into its own Managed Server. The OBI 11g installer comes with three installation types: _simple, enterprise and software._ The latter two installation types configure two WebLogic Server instances, the_ Administration Server_ and another _Managed Server_ called `bi_server1.` OBI 11g is deployed into the Managed Server called `bi_server1` and is configured by default to resolve to port `9704`.
+The simple installation type configures only the Administration Server, deploys OBI 11g into it, and resolves to port `7001`.
+For the simple installation type, only oen WebLogic Server instance exists.
+
+
+
+
+
+
+
+
 
 
 
