@@ -136,8 +136,12 @@ For the simple installation type, only oen WebLogic Server instance exists.
 
 ### WebLogic Node Manager
 
+The general idea behind the Node Manager is that it takes on somewhat of a
+middle-man role. Which means the Node Manager provides a communication tunnel between the WebLogic Administration Server and any WebLogic Managed Servers configured within the WebLogic Domain.  If the Node Manager is not running on the server on which the Managed Server is deployed, then the core Administration Server will not be able to issue start or stop commands to that server. As such, if the Node Manager is down, communication with the overall cluster will be affected.
 
+The following diagram shows how machines A, B and C are physically separated, each of them contains a Node Manager. 
 
+[Image 46]
 
 
 
