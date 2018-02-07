@@ -1,6 +1,7 @@
 # obi11g
 OBIEE: the book (Oracle Business Intelligence Enterprise Edition 11g: A Hands-On Tutorial) provides an overview of the oracle Fusion Middleware.
 
+
 # Architecture Overview (big picture):
   Infrastructure components of OBI 11g:
 
@@ -146,9 +147,20 @@ The following diagram shows how machines A, B and C are physically separated, ea
 ### System tools controlled by WebLogic
 Previously, the WebLogic Administration Console controls the administrative configuration of the WebLogic Server Domain. This includes the components managed within it such as security, deployed applications, and so on. The other management tool which provides control on the deployed Oracle BI application ancillary deployments, libraries and several other configurations is called the **Enterprise Manager Fusion Middleware Control.**
 
-> The name is often shotened to **Fusion Control** or **Enterprise Manager**.
+> The name is often shortened to **Fusion Control** or **Enterprise Manager**.
 
+### Oracle Process Management and Notification system
+The **Oracle Process Management and Notification (OPMN)** system is not a new concept or tool within the Oracle product line.  The OPMN controls the Oracle BI 11g system components.  Those are the components primarily developed in the C++ programming language. The OPMN not only allows each of the five system components to be started and stopped by calling a single command, it will also monitor those system component processes at runtime. It can even attempt to restart a component if it detects a failure. To start and stop the system components, you can use the Oracle Enterprise Manager Fusion Middleware Control or a command-line interface. The following screenshots represent the status retrieval of the System components sing the Fusion Middleware Control GUI and CLI (command-line interface), respectively:
 
+[image 47] 
+
+[image 47]
+
+The command-line executable is deployed with the Oracle BI 11g installation.
+It resides in the default filesystem directory locations `/u01/FMW/Instances/instance1/bin/opmnctl` or `C:\oracle\fmw\instances\instance1\opmnctl.bat`.
+
+The Enterprise Manger Fusion Middleware Control, as per the default Oracle BI 11g
+installation, is accessible via the URL – `http://<bi_server_name>:7001/em.`
 
 
 
