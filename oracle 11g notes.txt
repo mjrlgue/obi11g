@@ -1,0 +1,17 @@
+OBIEE: the book provides an overview of the oracle BI architecture and it's place
+        in the oracle Fusion Middleware
+        
+I. Oracle Bi 11g Architecture:
+
+  -> oracle BI domain: it is the core architecture of Oracle 11g
+  -> WebLogic Server :  It is the chosen application server for Oracle BI 11g
+     Java components :  components and classes written in Java for Oracle 11g. 
+                        They are deployed to the application server and WebLogic
+                        Server.
+    System components: components which have been written mainly in C++ for 
+                       Oracle BI 11g. They are managed by the Oracle Process
+                       Management and Notification Server.
+    Oracle BI relational repository: a set of database schemas that store
+                                      metadata related to a specific OBI 11g instance.
+    Oracle BI filesystem: set of physical files and directories containing 
+                          configuration, logs, and metadata concerning.
