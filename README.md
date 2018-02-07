@@ -1,6 +1,10 @@
 # obi11g
 OBIEE: the book (Oracle Business Intelligence Enterprise Edition 11g: A Hands-On Tutorial) provides an overview of the oracle Fusion Middleware.
 
+# Quick notes
+### Access URL
+ - Enterprise Manger Fusion Middleware Control: ` http://<bi_server_name>:7001/em`
+
 
 # Architecture Overview (big picture):
   Infrastructure components of OBI 11g:
