@@ -1,6 +1,5 @@
 # obi11g
-OBIEE: the book (Oracle Business Intelligence Enterprise Edition 11g: A Hands-On Tutorial) provides an overview of
-         the oracle Fusion Middleware.
+OBIEE: the book (Oracle Business Intelligence Enterprise Edition 11g: A Hands-On Tutorial) provides an overview of the oracle Fusion Middleware.
 
 # Architecture Overview (big picture):
   Infrastructure components of OBI 11g:
