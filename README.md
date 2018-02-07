@@ -97,13 +97,29 @@ Following illustration shows each of the components comprising the core Oracle B
 ### WebLogic Server
 **WebLogic** is an enterprise application server that is at the core of Oracle Fusion Middleware. The Oracle WebLogic Server is a scalble, enterprise-ready **Java Platform Enterprise Edition (Java EE)** application server. Its infrastructure supports the deployment of many types of distributed applications.
 
-###WebLogic Domian
+### WebLogic Domian
 The highest unit of management for controlling the WebLogic Server Installation is called a **domain**. A domain is a logically related group of WebLogic Server resources that you manage as a unit. A domain always includes, and is centrally maanged by one Administration Server. Additional WebLogic Server instances which are controlled by the Administration Server for the domain are called **Managed Servers**. The configuration for all the servers in the domain is stored in the configuration repository, the `config.xml` file, which resides on the macine hosting the Administration Server. The `config.xml` files, by default, are stored in the path `<FMW_HOME>\user_projects\domains\bifoundation_domain\`,
 where `<FMW_HOME>` is the path on the server to which you have installed OBI 11g.
 
 Upon installing and configuring Oracle BI 11g, the domain named `bifoundation_domain` is established within the WebLogic Server. This domain is the recommended name for each Oracle BI 11g implementation and should not be modified.
 
+### WebLogic Administration Server
+The WebLogic Server is an enterprise software suite that manages a myriad of application server components mainly focused on Java technology.
+One of the most crucial components of the WebLogic Server is the WebLogic Administration Server. When installing the WebLogic Server software, the WebLogic Administration
+Server is automatically installed with it.  It is the Administration Server that not
+only controls all subsequent WebLogic Server instances called Managed Servers,
+but also controls aspects such as security, Persistence Stores, and other application
+server-related configurations.
 
+The WebLogic Server gets installed on the operating system and ultimately runs as
+a service on that machine. The WebLogic Server can be managed in several ways. The two main methods are via the **Graphical User Interface (GUI)** web application
+called the WebLogic Administration Console or via the command line using the
+**WebLogic Scripting Tool (WLST).** 
+_The WebLogic Administration Server and the WebLogic Server are basically
+synonymous._  If the WebLogic Server is not running, the WebLogic Administration
+Console will be unavailable as well. If the WebLogic AdminServer is not running, no
+administrative tasks can be made to the system, although concessions are made for
+a High Availability configuration.
 
 
 
