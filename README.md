@@ -127,9 +127,14 @@ on to one or more WebLogic Managed Servers in a WebLogic Domain. A WebLogic
 Managed Server is an instance of a WebLogic Server in a WebLogic Server domain. Only one Administration Server per domain must exist, but one or more Managed Servers may exist in
 the WebLogic Server domain. Having one or more managed servers, allow for
 deployed JEE applications to be logically delineated.
+
 In a production deployment, OBI 11g is deployed into its own Managed Server. The OBI 11g installer comes with three installation types: _simple, enterprise and software._ The latter two installation types configure two WebLogic Server instances, the_ Administration Server_ and another _Managed Server_ called `bi_server1.` OBI 11g is deployed into the Managed Server called `bi_server1` and is configured by default to resolve to port `9704`.
 The simple installation type configures only the Administration Server, deploys OBI 11g into it, and resolves to port `7001`.
 For the simple installation type, only oen WebLogic Server instance exists.
+
+> Note that the Enterprise Manager Fusion Control is actually a JEE application deployed to the Administration Server instance, which is why its web client is accessible under port `7001`. It is not necessarily a native application deployment to the core WebLogic Server, but gets deployed and configured during the OBI 11g configuration. 
+
+### WebLogic Node Manager
 
 
 
