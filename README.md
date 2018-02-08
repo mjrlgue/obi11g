@@ -166,6 +166,21 @@ It resides in the default filesystem directory locations `/u01/FMW/Instances/ins
 The Enterprise Manger Fusion Middleware Control, as per the default Oracle BI 11g
 installation, is accessible via the URL – `http://<bi_server_name>:7001/em.`
 
+### Security matter
+In this section we will discuss the basics of security, authentication, and authorization. By default, installing the Oracle WebLogic Server provides a default **Lighweight Directory Access Protocol (LDAP)** server referred to as the **WebLogic Server Embedded LDAP server**.
+
+This is a standards-compliant LDAP system which acts as the default authentication method for out-of-the-box OBI 11g. Integration of secondary LDAP providers, such as **Oracle Internet Directory (OID)** or **Microsoft Active Directory (MSAD)** is crucial in order to leverage most organizations identity management systems.
+
+The combination of multiple authentication providers is possible, it is in fact common. FOr example, a configuration may wish to have users that exist in both the Embedded LDAP server and MSAD to authenticate and have access to OBI 11g.
+
+OBI 11g security incorporates the Fusion Middleware Security model - **Oracle Platform Security Services (OPSS)**. This is a positive influence over managing all aspects of OBI 11g as it provides a very granular level of authorization and a large number of authentication and authorization integration mechanisms. OPSS introduces to OBI 11 g, the concept of managing privileges by application role instead of directly by user or group. It abides by open standards to integrate with security mechanisms that are growing in popularity. Those security mechanisms are **Security Assertion Markup Language (SAML)** 2.0 and so on.  Other well known single sign-on mechanisms such as SiteMinder and Oracle Access Manager have
+already preconfigured integration points within the Oracle BI 11g Fusion Control. 
+
+Concepts to know about security are:
+- OBI 11g security is managed completly in a different way from the previous versions, although the OBI 10g security model is still allowed for backwards compatibility.
+- An Oracle BI 11g best practice is to manage security by Application Roles.
+- Understanding the differences between the Identity Store, Credential Store, and Policy Store is critical for advanced security configuration and maintenance.
+
 
 
 
