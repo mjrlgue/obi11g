@@ -88,7 +88,7 @@ in OBI 11g, the system components are those which are developed in a non-Java pr
 The Oracle BI Server does not maintain a user session state. For high availability deployments, query results are cached in the blobal cache.
 
 - **Oracle BI Presentation Server:** This is a C++ process that generates the user interface pages and renders results sets on behalf of the Oracle BI Scheduler.
- 
+
  > Since the BI Presentation Server maintains the authentication state, the users do not have to log in on each subsequent dashboard that they visit. Note that if a system is stateless, the application cannot easily remember the information about the user or actions performed previously.
 
 - **Oracle BI Scheduler:** it is a C++ process that runs the jobs according to a configurable frequency. Jobs can be created by agents in Oracle BI Presentation Catalog, or jobs can be created by the Job Manager.
