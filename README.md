@@ -3,7 +3,10 @@ OBIEE: the book (Oracle Business Intelligence Enterprise Edition 11g: A Hands-On
 
 # Quick notes
 ### Access URL
- - Enterprise Manger Fusion Middleware Control: ` http://<bi_server_name>:7001/em`
+- **Enterprise Manger Fusion Middleware Control:** ` http://<bi_server_name>:7001/em`
+### Definitions
+- **RPD:** The Oracle BI Repository (RPD file) stores BI Server metadata, better
+known as RPD, which stems from its binary file extension (`.rpd`). The metadata defines logical schemas, physical schemas, physical-to-logical mappings, aggregate table navigation, and other constructs. You can edit Oracle BI repositories using the Oracle BI Administration Tool. More details [here](https://docs.oracle.com/cd/E57185_01/OFMIC/bi_repository.html)
 
 
 # Architecture Overview (big picture):
@@ -221,14 +224,22 @@ The Java application server, WebLogic Server, gets installed with the full versi
  - For a developer workstation deployment: 4GB RAM </pre>
 Other system requirement information can be found within the Oracle documentation.
 
+### Vertical expansion versus horizontal expansion
+**TO ADD LATER !**
+### Oracle BI Server (system component) Cluster Controller
+**TO ADD LATER !**
+### Failover and high availability
+**TO ADD LATER !**
+### Directory folder structure
+**TO ADD LATER !**
 
+### Log files (diagnostics)
+**TO ADD LATER !**
 
+### Configuration files
+**TO ADD LATER !**
 
-
-
-
-
-
-
+### 
+**TO ADD LATER !**
 
 
