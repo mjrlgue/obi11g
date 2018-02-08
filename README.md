@@ -214,7 +214,12 @@ The following illustration shows from where each area of security management is 
 
 These three types of security providers within Oracle Fusion Middleware are integral to the Oracle BI 11g architecture. A chapter or more could be written on each provider but that is outside the scope of this book. Further recommended research on this topic would be to look at Oracle Fusion Middleware Security, OPSS, and the **Application Development Framework (ADF).**
 
-
+### System requirements
+The first thing to recognize with infrastructure requirements prior to deploying Oracle BI 11g is that its memory and processor requirements have been increased since previous versions.
+The Java application server, WebLogic Server, gets installed with the full version of its software (under a limited/restricted license).  A multitude of additional Java libraries and applications are also deployed. Ultimately, the authentication **Application Development Framework**(ADF) used to develop much of the platform accounts for a larger overall footprint. 
+<pre> - For an enterprise deployment: 8GB RAM
+ - For a developer workstation deployment: 4GB RAM </pre>
+Other system requirement information can be found within the Oracle documentation.
 
 
 
