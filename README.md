@@ -181,9 +181,38 @@ Concepts to know about security are:
 - An Oracle BI 11g best practice is to manage security by Application Roles.
 - Understanding the differences between the Identity Store, Credential Store, and Policy Store is critical for advanced security configuration and maintenance.
 
+### Backwards compatibility
+The best practice for OBI 11g security is to use the default Oracle Fusion Middleware security model. However, the legacy approach to manage security via the Oracle BI metada repository (RPD) is still allowed.  This backwards compatibility for security allows environments running on previous versions of Oracle BI (for example, Oracle BI 10g).
 
+### Managing by application roles
+In previous releases of Oracle BI security, groups and the relationship of a managed Identity Store's (that is LDAP or custom relational table) users with an Oracle BI group was managed within the RPD. A group was the highest level of organization for specific sets of users. This goes for both the metadata repository and the Web Catalog. This legacy approach was limited to a single software solution, Oracle BI.
 
+In OBI 11g, the default security model is the Oracle Fusion Middleware security model which has a much broader vision and scope. General Information Technology security administration best practice is to set permissions or privileges to a specific point of access on a group and not individual users. The same idea applies here except there is another enterprise level of user/group aggregation called an **Application Role**. Application roles  can contain other application roles, groups, or individual users. Access privileges to a certain object such as a folder, web page, or column should always be assigned to an application role. Application roles for Oracle BI 11g can be managed in the Oracle Enterprise Manager Fusion Middleware
+Control interface.
 
+### Security providers
+OBI 11g uses three main repositories for accessing authentication and authorization information, and are:
+- Identity Store
+- Credential Store
+- Policy Store
+
+### Identity Store
+This is the authentication provider. A simple mnemonic here is that this store tells OBI how to identify any users attempting to access the system. An example of creating an Identity Store would be to configure an LDAP system such as the Oracle Internet Directory or Microsoft Active Directory to reference users within an organization.
+
+### Credential Store
+The credential store is ultimately for advanced Oracle configuration. The Credential Store does exactly what its name implies - it stores credentials.
+
+Specifically, it is used to store credentials of other applications, which the core application (that is, OBI) may access later without having to re-enter credentials. An example of this would be integrating OBI 11g with the **Oracle Enterprise Management (EPM)** suite. let's say that users of a company want to access the OBI dashboard.While viewing said dashboard, the user requires the ability to click on a link which opens an Oracle EPM Financial Report containing more details about the concern. And the question is: How could they open and view the report without being prompted for credentials?
+The answer would be that the credential store would be configured with the credentials of a central user having access to the Oracle EPM environment. This central user's credentials (encrypted one) are passed along with the daashboard wiewer's request and _voilà_, they have access ! 
+
+### Policy Store
+The policy store is unique to Fusion Middleware security and leverages a security standard referred to as **eXtensible Access Control Markup Language (XACML),** which provides granular access and privilege control for an enterprise application. This is one of the reasons why managing by application roles becomes so important. The application priviles, such as the ability to administer the OBI 11g RPD, are assigned to a particular application role, and these associations are defined in the policy store.
+
+The following illustration shows from where each area of security management is controlled:
+
+[image 51]
+
+These three types of security providers within Oracle Fusion Middleware are integral to the Oracle BI 11g architecture. A chapter or more could be written on each provider but that is outside the scope of this book. Further recommended research on this topic would be to look at Oracle Fusion Middleware Security, OPSS, and the **Application Development Framework (ADF).**
 
 
 
